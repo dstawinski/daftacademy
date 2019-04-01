@@ -109,6 +109,15 @@ $font-color-grey: #9ca3af;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5%;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #bbd4d1;
+  }
 }
 
 .drink {
