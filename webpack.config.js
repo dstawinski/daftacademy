@@ -3,9 +3,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    main: "./src/index.js",
+    script: "./src/script.js"
+  },
   output: {
-    filename: "main.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist")
   },
   plugins: [
@@ -26,7 +29,8 @@ module.exports = {
           options: {
             presets: [["@babel/preset-env",
               {
-                "useBuiltIns": "entry"
+                "useBuiltIns": "entry",
+                "corejs": "2.6.5"
               }]]
           }
         }
