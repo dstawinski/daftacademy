@@ -26,6 +26,7 @@ describe('Fibonacci function', () => {
   it(`should return fib(n-1)+fib(n-2) when n >= 3`, () => {
     const fib1 = fib(3);
     const fib2 = fib(4);
+
     expect(fib(5)).toEqual(fib1 + fib2);
   })
 })
